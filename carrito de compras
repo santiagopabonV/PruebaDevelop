@@ -1,0 +1,46 @@
+using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+
+namespace WebpersonalBackEnd.NewFolder
+{
+    [Route("Carrito de Compras]")]
+    [ApiController]
+    public class BasesDatosController : ControllerBase
+    {
+        // GET: api/<BasesDatosController>
+        [HttpGet]
+        public IEnumerable<string> Get()
+        {
+            return new string[] { "producto1", "producto2" };
+        }
+
+        // GET api/<BasesDatosController>/5
+        [HttpGet("{id}")]
+        public string Get(int id)
+        {
+            return "value";
+        }
+
+        // POST api/<BasesDatosController>
+        [HttpPost]
+        public void Post([FromBody] string value)
+        {
+        }
+
+        // PUT api/<BasesDatosController>/5
+        [HttpPut("{id}")]
+        public void Put(int id, [FromBody] string value)
+        {
+        }
+
+        // DELETE api/<BasesDatosController>/5
+        [HttpDelete("{id}")]
+        public void Delete(int id)
+        {
+        }
+    }
